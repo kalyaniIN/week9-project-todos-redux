@@ -6,7 +6,7 @@ export const DeleteTask = ({ taskId }) => {
   const dispatch = useDispatch();
 
   const handleDeleteTask = () => {
-    // Dispatch the deleteListItem action with the taskId
+    // Dispatch the removeListItem action with the taskId
     dispatch(removeListItem(taskId));
   };
 

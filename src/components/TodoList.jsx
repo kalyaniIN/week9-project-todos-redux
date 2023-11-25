@@ -1,41 +1,21 @@
-import { useSelector, useDispatch } from "react-redux";
-import { toggleComplete } from "../reducers/todo/todoSlice";
+import { useSelector } from "react-redux";
 
-import { AddTaskForm } from "./AddTask";
-import { DeleteTask } from "./DeleteTask";
 import { TodoAmount } from "./TodoAmount";
+import { TodoItem } from "./TodoItem";
 
 import "./TodoList.css";
 
 export const TodoList = () => {
-  //subscribing to the store using selector
-  const todoItems = useSelector((store) => store.todo.todoListItems);
-  console.log(todoItems);
-
-  const dispatch = useDispatch();
-
-  const handleToggleComplete = (taskId) => {
-    dispatch(toggleComplete(taskId));
-  };
+  // subscribing to the store using selector
+  const todoItems = useSelector((state) => state.todo.todoListItems);
 
   return (
     <div className="todo-list">
-      <h1>Todo List</h1>
-      <AddTaskForm />
       <TodoAmount todoItems={todoItems} />
       <ul>
         {todoItems.map((task) => (
           <li key={task.id}>
-            <input
-              type="checkbox"
-              checked={task.complete}
-              onChange={() => handleToggleComplete(task.id)}
-            />
-
-            {task.text}
-            <span>
-              <DeleteTask taskId={task.id} />
-            </span>
+            <TodoItem key={task.id} {...task} />
           </li>
         ))}
       </ul>

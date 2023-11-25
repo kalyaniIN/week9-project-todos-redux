@@ -19,10 +19,10 @@ export const AddTaskForm = () => {
 
   return (
     <form className="add-task-form">
-      <input
-        type="text"
-        id="todo-input"
-        placeholder="Enter Task"
+      <textarea
+        id="textArea"
+        rows="2"
+        placeholder="Add Todo!"
         value={inputValue}
         onChange={handleInputChange}
         className="add-task-form-input"

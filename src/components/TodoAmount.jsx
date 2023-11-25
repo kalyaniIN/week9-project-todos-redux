@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 export const TodoAmount = () => {
-  const todos = useSelector((store) => store.todo.todoListItems);
+  const todos = useSelector((state) => state.todo.todoListItems);
   const amountToDo = todos.filter((task) => task.complete);
 
   return (
