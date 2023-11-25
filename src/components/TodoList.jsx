@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 
-import { TodoAmount } from "./TodoAmount";
 import { TodoItem } from "./TodoItem";
 
 import "./TodoList.css";
@@ -11,7 +10,6 @@ export const TodoList = () => {
 
   return (
     <div className="todo-list">
-      <TodoAmount todoItems={todoItems} />
       <ul>
         {todoItems.map((task) => (
           <li key={task.id}>
