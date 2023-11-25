@@ -34,7 +34,7 @@ export const AddTodoForm = () => {
           onClick={handleAddTask}
           className="add-task-form-button"
         >
-          Add Task
+          Add
         </button>
       </form>
     </div>

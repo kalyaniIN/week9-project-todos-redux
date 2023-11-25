@@ -2,7 +2,7 @@
   min-height: calc(100vh - 120px);
   width: 90vw;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
 }
@@ -24,6 +24,7 @@ button:hover:enabled {
 }
 
 .add-task-form {
+  width: 100%;
   display: flex;
   align-items: center;
   vertical-align: middle;
@@ -35,4 +36,10 @@ button:hover:enabled {
 
 ul {
   list-style-type: square;
+}
+
+#textArea {
+  font-size: 18px;
+  width: 70%;
+  margin: 0;
 }
