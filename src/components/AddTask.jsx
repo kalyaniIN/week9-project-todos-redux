@@ -1,5 +1,6 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
+
 import { addListItem } from "../reducers/todo/todoSlice";
 
 export const AddTaskForm = () => {
@@ -12,10 +13,8 @@ export const AddTaskForm = () => {
 
   const handleAddTask = (e) => {
     e.preventDefault();
-    if (inputValue.trim() !== "") {
-      dispatch(addListItem(inputValue));
-      setInputValue("");
-    }
+    dispatch(addListItem(inputValue));
+    setInputValue("");
   };
 
   return (
@@ -26,13 +25,16 @@ export const AddTaskForm = () => {
         placeholder="Enter Task"
         value={inputValue}
         onChange={handleInputChange}
-        className="add-task-form_input"
+        className="add-task-form-input"
       />
-      <button type="submit" onClick={handleAddTask} className="add-task-form_button">
+      <button
+        type="submit"
+        disabled={inputValue.trim() === ""}
+        onClick={handleAddTask}
+        className="add-task-form-button"
+      >
         Add Task
       </button>
     </form>
   );
 };
-
-

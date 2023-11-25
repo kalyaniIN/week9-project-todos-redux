@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolKit";
+import { createSlice } from "@reduxjs/toolkit";
 
 //  const initialState = {
 //      todoListItems : [
@@ -12,37 +12,39 @@ import {createSlice} from "@reduxjs/toolKit";
 //  }
 
 const todoSlice = createSlice({
-    name:"todo",
-    initialState: {
-        todoListItems : [ ],
-        visibilityFilter: "all"
+  name: "todo",
+  initialState: {
+    todoListItems: [],
+    visibilityFilter: "all",
+  },
+  reducers: {
+    addListItem: (state, action) => {
+      state.todoListItems.push({
+        id: state.todoListItems.length + 1,
+        text: action.payload,
+        complete: false,
+      });
     },
-    reducers : {
-        addListItem : (state,action) => {
-            state.todoListItems.push(
-                {
-                    id: state.todoListItems.length + 1,
-                    text: action.payload,
-                    complete: false,
-                  });
-        },
-        removeListItem : (state , action )=>{
+    removeListItem: (state, action) => {
+      state.todoListItems = state.todoListItems.filter(
+        (todo) => todo.id !== action.payload
+      );
+    },
+    toggleComplete: (state, action) => {
+      state.todoListItems = state.todoListItems.map((todo) =>
+        todo.id === action.payload
+          ? { ...todo, complete: !todo.complete }
+          : todo
+      );
+    },
 
-           state.todoListItems = state.todoListItems.filter((todo)=>todo.id !== action.payload) ;
-                },
-        toggleComplete: (state, action) => {
-                    state.todoListItems = state.todoListItems.map((todo) =>
-                      todo.id === action.payload ? { ...todo, complete: !todo.complete } : todo
-                    );
-                  },
-        
-        clearList:(state) => {
-            state.todoListItems = [];
-        }
+    clearList: (state) => {
+      state.todoListItems = [];
+    },
+  },
+});
 
-    }
-})
-
-export const {addListItem , removeListItem ,toggleComplete,clearList} = todoSlice.actions;
+export const { addListItem, removeListItem, toggleComplete, clearList } =
+  todoSlice.actions;
 
 export default todoSlice.reducer;
