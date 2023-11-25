@@ -11,7 +11,7 @@ export const DeleteTask = ({ taskId }) => {
 
   return (
     <div>
-      <button onClick={handleDeleteTask}>Delete Task</button>
+      <button className= "task-delete-button" onClick={handleDeleteTask}>Delete Task</button>
     </div>
   );
 };

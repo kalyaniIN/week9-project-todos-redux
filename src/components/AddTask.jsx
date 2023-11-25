@@ -26,9 +26,9 @@ export const AddTaskForm = () => {
         placeholder="Enter Task"
         value={inputValue}
         onChange={handleInputChange}
-        className="add-task-form_input"
+        className="add-task-form-input"
       />
-      <button type="submit" onClick={handleAddTask} className="add-task-form_button">
+      <button type="submit" onClick={handleAddTask} className="add-task-form-button">
         Add Task
       </button>
     </form>

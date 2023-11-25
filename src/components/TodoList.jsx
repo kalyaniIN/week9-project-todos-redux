@@ -18,19 +18,19 @@ export const TodoList = () => {
   return (
     <>
       <div className="todo-list">
-        <h1>Todo List</h1>
+        <h1 className="todo-list-title">Todo List</h1>
         <AddTaskForm />
         <TodoAmount todoItems={todoItems} />
-        <ul>
+        <ul className="todo-list-tasks">
           {todoItems.map((task) => (
-            <li key={task.id}>
-              <input
+            <li key={task.id} className={`todo-list-task ${task.complete ? 'todo-list-task-completed' : ''}`}>
+              <input className="todo-list-checkbox"
                 type="checkbox"
                 checked={task.complete}
                 onChange={() => handleToggleComplete(task.id)}
               />
 
-              {task.text}
+              <span className="todo-list-texttext">{task.text}</span>
               <span>
                 <DeleteTask taskId={task.id} />
               </span>
