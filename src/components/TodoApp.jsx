@@ -1,6 +1,6 @@
 import { AddTodoForm } from "./AddTodoForm";
 import { TodoAmount } from "./TodoAmount";
-import { TodoList } from "./todoList";
+import { TodoList } from "./TodoList";
 
 import "./ToDoApp.css";
 
