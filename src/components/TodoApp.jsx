@@ -2,7 +2,7 @@ import { AddTodoForm } from "./AddTodoForm";
 import { TodoAmount } from "./TodoAmount";
 import { TodoList } from "./TodoList";
 
-import "./ToDoApp.css";
+import "./TodoApp.css";
 
 export const TodoApp = () => (
   <div className="todo-app-wrapper">
