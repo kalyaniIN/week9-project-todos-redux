@@ -1,0 +1,38 @@
+.todo-app-wrapper {
+  min-height: calc(100vh - 120px);
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 2.5rem 0;
+  max-width: var(--fixed-width);
+}
+
+.todo-app-wrapper h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+button {
+  margin: 10px;
+  border-radius: 20px;
+  min-width: 75px;
+}
+
+button:hover:enabled {
+  background-color: #0056b3;
+  color: white;
+}
+
+.add-task-form {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.add-task-form-wrapper button {
+  padding: 8px 16px;
+}
+
+ul {
+  list-style-type: square;
+}
