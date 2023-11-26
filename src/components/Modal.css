@@ -13,11 +13,11 @@
 
 .modal {
   background: white;
-  width: 30vw;
   max-width: 400px;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   text-align: center;
+  margin-top: -250px;
 }
 
 .modal h4 {

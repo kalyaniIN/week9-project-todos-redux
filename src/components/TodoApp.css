@@ -48,7 +48,8 @@ button:hover:enabled {
   vertical-align: middle;
 }
 
-.add-task-form-wrapper button {
+.add-task-form-wrapper button,
+.clearBtn {
   padding: 8px 16px;
 }
 
