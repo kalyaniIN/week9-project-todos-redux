@@ -14,3 +14,9 @@
 .todo-item label {
   border-bottom: 1px solid;
 }
+
+.delete-button {
+  background-color: transparent;
+  margin: 5px 0px;
+  border-radius: 25px;
+}

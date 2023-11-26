@@ -12,7 +12,9 @@ export const DeleteTodo = ({ taskId }) => {
 
   return (
     <div>
-      <button onClick={handleDeleteTask}>Delete</button>
+      <button onClick={handleDeleteTask} className="delete-button">
+        ❌
+      </button>
     </div>
   );
 };

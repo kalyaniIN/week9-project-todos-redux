@@ -20,7 +20,7 @@ export const Modal = () => {
               dispatch(closeModal());
             }}
           >
-            confirm
+            Confirm
           </button>
           <button
             type="button"
@@ -29,7 +29,7 @@ export const Modal = () => {
               dispatch(closeModal());
             }}
           >
-            cancel
+            Cancel
           </button>
         </div>
       </div>

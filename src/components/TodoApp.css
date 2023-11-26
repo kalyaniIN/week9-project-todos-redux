@@ -31,10 +31,10 @@
   color: floralwhite;
 }
 
-button {
+button:not(.delete-button) {
   margin: 5px;
   border-radius: 20px;
-  min-width: 75px;
+  min-width: 65px;
   background-color: aliceblue;
 }
 
@@ -54,7 +54,7 @@ button:hover:enabled {
 }
 
 .add-task-form-wrapper button,
-.clearBtn {
+.clear-button {
   margin: 10px;
   padding: 8px 16px;
 }

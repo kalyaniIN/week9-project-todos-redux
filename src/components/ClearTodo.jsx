@@ -12,7 +12,7 @@ export const ClearTodo = () => {
 
   return (
     <button
-      className="btn clearBtn"
+      className="clear-button"
       disabled={todos.length <= 0}
       onClick={handleClearTodo}
     >
