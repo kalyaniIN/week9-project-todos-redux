@@ -28,7 +28,7 @@
   text-align: center;
   margin-bottom: 1rem;
   display: block;
-  color: floralwhite;
+  color: darkblue;
 }
 
 button:not(.delete-button) {
@@ -75,6 +75,16 @@ button:hover:enabled {
   .todo-app-wrapper {
     width: var(--main-width-mobile);
   }
+
+  .add-task-form {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .add-task-form-wrapper button {
+    margin: 10px 10px 0px 0px;
+    padding: 8px 16px;
+  }
 }
 
 @media (min-width: 641px) {
@@ -84,8 +94,17 @@ button:hover:enabled {
   }
 
   .todo-app-wrapper {
-    /* width: var(--main-width-desktop); */
     width: 80%;
+  }
+
+  .add-task-form {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .add-task-form-wrapper button {
+    margin: 10px 10px 0px 10px;
+    padding: 8px 16px;
   }
 }
 
@@ -97,5 +116,15 @@ button:hover:enabled {
 
   .todo-app-wrapper {
     width: var(--main-width-desktop);
+  }
+
+  .add-task-form {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .add-task-form-wrapper button {
+    margin: 10px 10px 0px 10px;
+    padding: 8px 16px;
   }
 }
