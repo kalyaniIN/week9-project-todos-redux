@@ -1,11 +1,16 @@
 .todo-list {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .todo-item {
   display: grid;
   align-items: center;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 0fr 3fr 1fr;
   grid-column-gap: 0.5rem;
+}
+
+.todo-item label {
+  border-bottom: 1px solid;
 }

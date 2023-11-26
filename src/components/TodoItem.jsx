@@ -12,15 +12,14 @@ export const TodoItem = ({ id, text, complete }) => {
 
   return (
     <section className="todo-item">
-      <label htmlFor={id}>
-        <input
-          id={id}
-          type="checkbox"
-          checked={complete}
-          onChange={() => handleToggleComplete(id)}
-        />
-        {text}
-      </label>
+      <input
+        id={id}
+        type="checkbox"
+        value={text}
+        checked={complete}
+        onChange={() => handleToggleComplete(id)}
+      />
+      <label htmlFor={id}>{text}</label>
       <span>
         <DeleteTodo taskId={id} />
       </span>
