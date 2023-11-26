@@ -17,5 +17,175 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f1f5f8;
+  /* background: #f1f5f8; */
+  background-image: url("../src/assets/background.png");
+ 
+
+  font-weight: 200px;
+  box-sizing: border-box;
+  
+  background-color: #eaf4ef;
+  display: block;
+    margin: 8px;
+}
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+  background-color:hsl(324, 83%, 98%);
+  border-radius: 2.8rem;
+  box-shadow: 0 0.5rem 2rem #383737;
+  margin: 0 auto;
+  min-height: 95vh;
+  width: 100%;
+  backdrop-filter: blur(6.2px);
+  -webkit-backdrop-filter: blur(6.2px);
+}
+.title {
+font-size: 32px;
+font-weight: bold;
+color:  rgb(121, 182, 193);
+text-align: center;
+margin-top: 70px;
+padding-top: 60px;
+}
+.todo-list{
+  text-align: center;
+  color:  rgb(121, 182, 193);
+}
+
+.add-task-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-container{
+  display: flex;
+  align-items: center;
+}
+.add-task-form-input {
+  flex: 1;
+  border: solid 2px rgb(121, 182, 193);
+  border-radius: 0.6rem;
+  margin: 1.5rem 0.5rem;
+  color: rgb(86, 107, 120);
+  font-size: 1rem;
+  font-weight: 200;
+  height: 3.2rem;
+  width: 90%;
+  padding: 1.2rem;
+}
+
+.add-task-form-button {
+  flex-shrink: 0;
+  background-color: rgb(121, 182, 193);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  margin-left: 0.5rem;
+  height: 3.2rem;
+  padding: 1.2rem;
+}
+.todo-count {
+  text-align: center;
+  color:  rgb(121, 182, 193);
+}
+.todo-container{
+  display: flex;
+  align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .todo-child{
+      display: flex;	
+    justify-content: center;
+    
+  }
+/* Checkbox container styles */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add some margin for spacing */
+}
+
+/* Custom checkbox styles */
+.checkbox-custom {
+  width: 20px; /* Adjust the size of the custom checkbox */
+  height: 20px;
+  border: 1px solid #3498db; /* Default border color */
+  background-color: #fff; /* Default background color */
+  margin-right: 5px; /* Add some margin to the right for spacing */
+}
+
+/* Additional styles for the "done" state */
+.done .checkbox-custom {
+  background-color: rgb(121, 182, 193); /* Background color for the "done" state */
+  border-color: rgb(55, 53, 53) /* Border color for the "done" state */
+}
+
+/* Hide the default checkbox */
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Show the custom checkbox when the real one is checked */
+.checkbox-input:checked + .checkbox-custom {
+  background-color: #2ecc71; /* Background color for the checked state */
+  border-color: #2ecc71; /* Border color for the checked state */
+}
+
+.btn-delete {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	margin-right: 5px;
+  }
+  
+  .btn-delete img {
+	height:20px;
+	margin-top: 9px;
+  }
+
+
+@media (min-width: 200px) and (max-width: 374px) {
+  .app-container {
+    margin-top: 2rem;
+    
+    min-height: 60vh;
+  }
+}
+
+ @media (min-width: 500px) and (max-width: 1024px) {
+  .app-container {
+    margin-top: 2rem;
+    width: 60%;
+    min-height: 60vh;
+  }
+  .add-task-form-button {
+   
+    margin: 5px
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px){
+  .app-container {
+    margin-top: 2rem;
+    width: 35%;
+    min-height: 60vh;
+  }
+}
+
+@media (min-width: 1441px){
+  .app-container {
+    margin-top: 3rem;
+    border: 2px solid #1F9D6E;
+    width: 25%;
+    min-height: 60vh;
+  }
 }

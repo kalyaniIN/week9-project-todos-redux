@@ -18,24 +18,26 @@ export const AddTodoForm = () => {
   };
 
   return (
-    <div className="add-task-form-wrapper">
+    <div >
       <form className="add-task-form">
-        <textarea
-          id="textArea"
-          rows="2"
-          placeholder="Add Todo!"
-          value={inputValue}
-          onChange={handleInputChange}
-          className="add-task-form-input"
-        />
-        <button
-          type="submit"
-          disabled={inputValue.trim() === ""}
-          onClick={handleAddTask}
-          className="add-task-form-button"
-        >
-          Add
-        </button>
+        <label htmlFor="new-item" className="input-container">
+            <textarea
+              id="textArea"
+              rows="2"
+              placeholder="Add Todo!"
+              value={inputValue}
+              onChange={handleInputChange}
+              className="add-task-form-input"
+            />
+            <button
+              type="submit"
+              disabled={inputValue.trim() === ""}
+              onClick={handleAddTask}
+              className="add-task-form-button"
+            >
+              Add
+            </button>
+          </label>
       </form>
     </div>
   );

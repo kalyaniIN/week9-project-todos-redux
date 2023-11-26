@@ -12,9 +12,9 @@ export const TodoList = () => {
     <div className="todo-list">
       <ul>
         {todoItems.map((task) => (
-          <li key={task.id}>
+          // <li key={task.id}>
             <TodoItem key={task.id} {...task} />
-          </li>
+          // </li>
         ))}
       </ul>
     </div>

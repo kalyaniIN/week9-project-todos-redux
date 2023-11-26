@@ -6,7 +6,7 @@ export const TodoAmount = () => {
 
   return (
     <div noTask={amountToDo.length <= 0 && todos.length <= 0}>
-      <p>
+      <p className="todo-count">
         {amountToDo.length} of {todos.length} tasks completed
       </p>
     </div>

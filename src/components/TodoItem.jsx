@@ -11,19 +11,25 @@ export const TodoItem = ({ id, text, complete }) => {
   };
 
   return (
-    <section className="todo-item">
-      <label htmlFor={id}>
-        <input
-          id={id}
-          type="checkbox"
-          checked={complete}
-          onChange={() => handleToggleComplete(id)}
-        />
-        {text}
-      </label>
-      <span>
-        <DeleteTask taskId={id} />
-      </span>
-    </section>
+    <div className="todo-container">
+
+      <p className="todo-text">{text}</p>
+          <section className="todo-child">
+            <label htmlFor={id} className={complete ? 'checkbox-label done' : 'checkbox-label'}>
+              <input
+                id={id}
+                type="checkbox"
+                checked={complete}
+                onChange={() => handleToggleComplete(id)}
+                className="checkbox-input"/>
+                <span className="checkbox-custom"></span>
+             
+            </label>
+            <span>
+              <DeleteTask taskId={id} />
+            </span>
+          </section>
+
+    </div>
   );
 };
