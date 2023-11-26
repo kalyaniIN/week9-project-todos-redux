@@ -1,22 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-//  const initialState = {
-//      todoListItems : [
-//         { id: 1, text: 'Watch video on actions & reducers', complete:   true },
-//         { id: 2, text: 'Follow redux codealong', complete: true },
-//         { id: 3, text: 'Fork weekly assignment', complete: true },
-//         { id: 4, text: 'Create a todo app', complete: false },
-//       ],
-//      total:0,
-//      isLoading : true
-//  }
+const initialState = {
+  todoListItems: [
+    { id: 1, text: "Watch video on actions & reducers", complete: true },
+    { id: 2, text: "Follow redux codealong", complete: true },
+    { id: 3, text: "Fork weekly assignment", complete: true },
+    { id: 4, text: "Create a todo app", complete: false },
+  ],
+};
 
 const todoSlice = createSlice({
   name: "todo",
-  initialState: {
-    todoListItems: [],
-    visibilityFilter: "all",
-  },
+  initialState,
   reducers: {
     addListItem: (state, action) => {
       state.todoListItems.push({
@@ -37,7 +32,6 @@ const todoSlice = createSlice({
           : todo
       );
     },
-
     clearList: (state) => {
       state.todoListItems = [];
     },
