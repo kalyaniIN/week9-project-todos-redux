@@ -1,13 +1,7 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 :root {
-  --large-screen-width: 1170px;
-  --small-screen-width: 90vw;
-  --fixed-width: 50rem;
+  --general-padding: 35px;
+  --main-width-mobile: 90%;
+  --main-width-desktop: 70%;
 }
 
 body {

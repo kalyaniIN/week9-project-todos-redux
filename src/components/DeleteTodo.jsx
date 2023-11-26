@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { removeListItem } from "../reducers/todo/todoSlice";
 
-export const DeleteTask = ({ taskId }) => {
+export const DeleteTodo = ({ taskId }) => {
   const dispatch = useDispatch();
 
   const handleDeleteTask = () => {

@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 
 import { toggleComplete } from "../reducers/todo/todoSlice";
-import { DeleteTask } from "./DeleteTask";
+import { DeleteTodo } from "./DeleteTodo";
 
 export const TodoItem = ({ id, text, complete }) => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export const TodoItem = ({ id, text, complete }) => {
         {text}
       </label>
       <span>
-        <DeleteTask taskId={id} />
+        <DeleteTodo taskId={id} />
       </span>
     </section>
   );

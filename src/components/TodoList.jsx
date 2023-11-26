@@ -10,13 +10,9 @@ export const TodoList = () => {
 
   return (
     <div className="todo-list">
-      <ul>
-        {todoItems.map((task) => (
-          <li key={task.id}>
-            <TodoItem key={task.id} {...task} />
-          </li>
-        ))}
-      </ul>
+      {todoItems.map((task) => (
+        <TodoItem key={task.id} {...task} />
+      ))}
     </div>
   );
 };
